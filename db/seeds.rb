@@ -9,7 +9,8 @@
 #   end
 30.times do
   Article.create!(
-    title: Faker::FunnyName.name,
-    content: Faker::ChuckNorris.fact
+    title: Faker::Hipster.word.capitalize,
+    content: Faker::ChuckNorris.fact,
+    author: Faker::FunnyName.name
   )
 end
