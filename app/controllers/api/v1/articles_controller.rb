@@ -3,9 +3,8 @@ class Api::V1::ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    @articles = Article.all
-
-    render json: @articles
+    articles = Article.includes(:user).all
+    render json: articles, include: { user: { only: :username } }
   end
 
   # GET /articles/1

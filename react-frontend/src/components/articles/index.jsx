@@ -7,7 +7,7 @@ function Articles(props) {
             <div key={article.id}>
               <h2>{article.id} - {article.title}</h2>
               <p>{article.content}</p>
-              <p>{article.author}</p>
+              <p>{article.user.username}</p>
             </div>
           );
         })}
